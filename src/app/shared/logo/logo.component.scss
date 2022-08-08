@@ -1,0 +1,13 @@
+svg {
+    #alpha, #text, #hexa {
+        fill: #fff;
+    }
+    &.dark{
+        #alpha, #text, #hexa {
+            fill: #222;
+        }
+    }
+    
+
+    
+}

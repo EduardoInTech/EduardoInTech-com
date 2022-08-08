@@ -1,1 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/_reset.css';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-display: swap;
+}
+.container {
+    max-height: 100vh;
+    overflow-y: scroll;
+    // -webkit-overflow-scrolling: touch; // adds momentum scrolling for iOS, 
+    // scroll-snap-type: mandatory;
+    scroll-snap-type: y mandatory; // y proximity | y mandatory
+}
+.wrapper {
+    // justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    max-width: 56rem;
+    padding: 0 1.5rem;
+}
+
+section {
+    box-sizing: border-box;
+    min-height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    p {
+        padding: 0.5rem 0;
+        font-size: 0.95rem;
+        text-align: justify;
+    }
+    .nav-back {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        height: 4rem;
+        background: inherit;
+        overflow: hidden;
+        &:before {
+            content: "";
+            position: absolute;
+            background: inherit;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    &.welcome{
+        background-color: #0e4e89;
+        background-image: url(./assets/future-grid.webp), linear-gradient(90deg, #2E76B8 0%, #0e4e89 29%, #0e4e89 71%, #2E76B8 100%);
+        background-size: 100% 100%;
+    }
+    &.iam{
+        background-color: #fff;
+        .nav-back {
+            background-color: #2E77B6;
+        }
+        .picture {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.2rem 0;
+            svg {
+                max-width: 12rem;
+            }
+        }
+
+    }
+    &.askme {
+        background-image: linear-gradient(90deg, #976fd7 35%, #845EC2 65%);
+    }
+    &.portfolio{
+        background-image: linear-gradient(90deg, #edc949 35%, #e2bb2f 65%);
+        
+    }
+    &.contact{
+        background-image: linear-gradient(90deg, #95897E 35%, #8f8072 65%);
+        position: relative;
+        
+    }
+    &.extra{
+        background-color: #A9C9FF;
+        background-image: linear-gradient(90deg, #f9cdf1 0%, #fb3872 100%);
+        // .nav-back {}
+
+    }
+    .h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        text-align: center;
+        height: 100vh;
+        color: rgba($color: #ffffff, $alpha: 1.0);
+        font-weight: bold;
+    }
+    .footer {
+        height: 20vh;
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+        background-color: #222;
+        color: #fff;
+        .wrapper {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+    }
+}
+footer {
+
+    box-sizing: border-box;
+    min-height:100vh;
+    width: 100vw;
+    background-color: #fff;
+}

@@ -1,0 +1,31 @@
+
+  <header class="header">
+    <div class="wrapper">
+        <div class="logo">
+            <app-logo [logoType]="'text'"></app-logo>
+        </div>
+        <svg (click)="openCloseSwitch()" class="menu" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z" fill="white"/>
+        </svg>
+
+        <nav [class.open-nav]="isOpen">
+
+            <svg (click)="openCloseSwitch()" class="close" viewBox="-1 -1 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#fff" stroke="#fff" stroke-linecap="round" stroke-width="1.5"
+                d="m0 0 9,9 M0 9 9,0" />
+            </svg>
+            
+            <div class="logo-menu">
+                <app-logo [logoType]="'hexa'" [color]="'#fff'"></app-logo>
+            </div>
+            <ul>
+                <li><a href="#">Ask me</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Github</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+            
+        </nav>
+
+    </div>
+  </header>
